@@ -1,33 +1,19 @@
 package service;
 
+import model.Clube;
+
+import repository.ClubeRepository;
+
 public class ClubeService {
 
-	public int Id;
-	public String Nome;
-	public int Pontos;
+	public Clube getClube() {
+		ClubeRepository repository = new ClubeRepository();
+		return repository.getClube();
 
-	public int getId() {
-		return Id;
 	}
 
-	public void setId(int id) {
-		Id = id;
+	public void setClube(Clube clube) {
+		ClubeRepository repository = new ClubeRepository();
+		repository.setClube(clube);
 	}
-
-	public String getNome() {
-		return Nome;
-	}
-
-	public void setNome(String nome) {
-		Nome = nome;
-	}
-
-	public int getPontos() {
-		return Pontos;
-	}
-
-	public void setPontos(int pontos) {
-		Pontos = pontos;
-	}
-
 }

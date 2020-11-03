@@ -1,32 +1,18 @@
 package service;
 
+import model.Torcedor;
+import repository.TorcedorRepository;
+
 public class TorcedorService {
 
-	public int Id;
-	public String Nome;
-	public String IngressoId;
+	public Torcedor getTorcedor() {
+		TorcedorRepository repository = new TorcedorRepository();
+		return repository.getTorcedor();
 
-	public int getId() {
-		return Id;
 	}
 
-	public void setId(int id) {
-		Id = id;
-	}
-
-	public String getNome() {
-		return Nome;
-	}
-
-	public void setNome(String nome) {
-		Nome = nome;
-	}
-
-	public String getIngresso() {
-		return IngressoId;
-	}
-
-	public void setIngresso(String ingresso) {
-		IngressoId = ingresso;
+	public void setTorcedor(Torcedor torcedor) {
+		TorcedorRepository repository = new TorcedorRepository();
+		repository.setTorcedor(torcedor);
 	}
 }

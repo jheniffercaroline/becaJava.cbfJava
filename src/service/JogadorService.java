@@ -1,42 +1,20 @@
 package service;
 
+
+import model.Jogador;
+import repository.JogadorRepository;
+
 public class JogadorService {
 
-	public int Id;
-	public String Nome;
-	public int PosicaoId;
-	public int ClubeId;
+	public Jogador getJogador() {
+		JogadorRepository repository = new JogadorRepository();
+		return repository.getJogador();
 
-	public int getId() {
-		return Id;
 	}
 
-	public void setId(int id) {
-		Id = id;
-	}
+	public void setJogador(Jogador jogador) {
+		JogadorRepository repository = new JogadorRepository();
+		repository.setJogador(jogador);
 
-	public String getNome() {
-		return Nome;
 	}
-
-	public void setNome(String nome) {
-		Nome = nome;
-	}
-
-	public int getPosicaoId() {
-		return PosicaoId;
-	}
-
-	public void setPosicaoId(int posicaoId) {
-		PosicaoId = posicaoId;
-	}
-
-	public int getClubeId() {
-		return ClubeId;
-	}
-
-	public void setClubeId(int clubeId) {
-		ClubeId = clubeId;
-	}
-
 }
